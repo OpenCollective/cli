@@ -49,3 +49,9 @@ jobs:
       # Run benchmark suite
       - name: Run benchmarking
         run: LOG_LEVEL=verbose npm run benchmark
+
+      # Upload artifact
+      - uses: actions/upload-artifact@master
+        with:
+          name: results-npm
+          path: benchmarks/results
